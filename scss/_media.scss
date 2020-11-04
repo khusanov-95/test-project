@@ -1,0 +1,267 @@
+
+
+
+@media only screen and (max-width: 1200px){
+  //main img off 
+  .main__img img {
+    display: none;
+}
+//staff
+.staff {
+  &__carousel {
+    .prev-arrow {
+      left: 0;
+    }
+    .next-arrow {
+      right: 0;
+    }
+  }
+}
+//reviews 
+.reviews  {
+  &__carousel {
+    &-item-inner {
+      width: 280px;
+    }
+    &-name {
+      font: 700 16px/16px 'Montseratt-Bold',sans-serif;
+      margin-bottom: 10px;
+    }
+    &-text {
+      font-size: 13px;
+      line-height: 16px;
+    }
+    .prev-arrow,.next-arrow {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: none;
+      box-shadow: -11px 0px 35px 0px rgba(157, 170, 188, 0.37);
+      opacity: 1 !important;
+      z-index: 5;
+      top: 35%;
+    }
+    .prev-arrow {
+      left: 0;
+    }
+    .next-arrow {
+      right: 0;
+    }
+  }
+}
+//contacts 
+.contacts {
+  &__inner {
+    margin: 0 auto;
+  }
+  .map {
+    position: static;
+    margin: 20px auto 0;
+  }
+}
+}
+  
+
+@media only screen and (max-width: 992px){
+//global 
+.section-heading {
+  font: 700 28px/28px 'Montseratt-Bold',sans-serif; // Переделать в 800й шрифт
+}
+.box-heading {
+  font: 700 18px/18px 'Montseratt-Bold',sans-serif;
+}
+//header
+  .header {
+    &__link a {
+      padding: 15px 30px;
+    }
+  }
+
+//main 
+.main {
+  &__heading {
+    font: 700 30px/30px 'Montseratt-Bold',sans-serif;
+  }
+}
+//steps 
+.steps {
+  &__item {
+    margin-bottom: 20px;
+  }
+}
+//documents 
+.documents {
+  &__item {
+    margin-bottom: 20px;
+  }
+  &__item-descr {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+//eliminate 
+.eliminate {
+  &::after {
+    display: none;
+  }
+  &__alert {
+    margin: 0 auto 20px;
+  }
+  &__order {
+    background-color: #5c12fe;
+  }
+}
+//more-questions 
+.more-questions {
+  &__descr{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+}
+//footer 
+.footer {
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+}
+@media only screen and (max-width: 768px) {
+  //global 
+  .fheader__links {
+    flex-direction: column;
+  }
+//reasons 
+.reasons {
+  &__item {
+    width: 33.3%
+  }
+}
+//more-questions 
+.more-questions {
+  &__form span {
+    font-size: 10px;
+  }
+}
+//contacts 
+.contacts {
+  .map {
+    display: none;
+  }
+}
+}
+@media only screen and (max-width: 600px){
+  //global 
+.section-heading {
+  font: 700 20px/20px 'Montseratt-Bold',sans-serif; // Переделать в 800й шрифт
+}
+//main 
+.main {
+  &__heading {
+    font: 700 26px/26px 'Montseratt-Bold',sans-serif;
+  }
+}
+  //header
+  .header {
+    position: relative;
+    &__info {
+      display: none;
+    }
+    &__nav {
+      display: none;
+    }
+    // small screen menu
+    &__info.sm-screen {
+      display: block;
+    }
+    .small-nav-btn {
+      display: block;
+      position: absolute;
+      right: 40px;
+      top: 30%;
+      .fas {
+        font-size: 25px;
+      }
+    }
+    .nav-small {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      ul {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  //reasons 
+.reasons {
+  &__item {
+    width: 50%
+  }
+}
+//main section 
+.main {
+  &__callback input{
+    margin-bottom: 20px;
+    width: 290px;
+    max-width: 90%;
+
+  }
+}
+
+.fixed-header {
+  display: none!important; //убрать
+}
+//more info
+.more-info {
+  &__count-heading {
+    font: 700 14px/26px 'Montseratt-Bold',sans-serif;
+    width: 300px;
+  }
+  &__count input {
+    width: 95%;
+    margin: 0 auto 13px;
+  }
+}
+//questions
+.questions {
+  &__accordion {
+    &-descr {
+      font-size: 14px;
+      padding: 10px 70px 10spx 20px;
+    }
+    &-inner {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
+//more-questions 
+.more-questions {
+  &__descr {
+    span {
+      font-size: 12px;
+    }
+  }
+  &__inner {
+    padding:30px 10px;
+  }
+  &__form input {
+    width: 100%;
+  }
+  &__form span {
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+  }
+}
+}
+
+
+
+@media only screen and (max-width: 450px){
+  
+}
