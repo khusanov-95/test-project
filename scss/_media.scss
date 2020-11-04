@@ -2,6 +2,19 @@
 
 
 @media only screen and (max-width: 1200px){
+  //global 
+  .fheader__links {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .fheader__link a {
+    margin-bottom: 15px;
+  }
+  .fixed-header {
+    .fheader__links {
+      display: none;
+    }
+  }
   //main img off 
   .main__img img {
     display: none;
@@ -59,6 +72,14 @@
     margin: 20px auto 0;
   }
 }
+//footer 
+.footer {
+  &__link-descr {
+    font-size: 12px;
+    text-align: center;
+    display: block;
+  }
+}
 }
   
 
@@ -69,6 +90,12 @@
 }
 .box-heading {
   font: 700 18px/18px 'Montseratt-Bold',sans-serif;
+}
+.fheader__info {
+  justify-content: center;
+}
+.callme-inner {
+  padding: 89px 10px 70px;
 }
 //header
   .header {
@@ -129,9 +156,18 @@
 
 }
 @media only screen and (max-width: 768px) {
-  //global 
-  .fheader__links {
-    flex-direction: column;
+//global 
+.fheader__links {
+  flex-direction: column;
+ }
+.logo {
+  justify-content: center;
+}
+//header {
+  .header {
+    &__info {
+      justify-content: center;
+    }
   }
 //reasons 
 .reasons {
@@ -148,7 +184,7 @@
 //contacts 
 .contacts {
   .map {
-    display: none;
+    width: 80%!important;
   }
 }
 }
@@ -157,45 +193,62 @@
 .section-heading {
   font: 700 20px/20px 'Montseratt-Bold',sans-serif; // Переделать в 800й шрифт
 }
+  .callme-text {
+    font: 700 14px/16px 'Montseratt-Bold',sans-serif;// extra bold
+  }
+  .callme-form  {
+    span {
+      text-align: center;
+      font-size: 12px;
+      line-height: 14px;
+      margin: 33px 0 0;
+    }
+  }
+
 //main 
 .main {
   &__heading {
     font: 700 26px/26px 'Montseratt-Bold',sans-serif;
+    margin-top: 40px;
   }
 }
   //header
+  .fixed-header {
+    display: none!important;
+  }
   .header {
+    &__top {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background-color: #fff;
+    }
     position: relative;
-    &__info {
+    &__info, .fheader__info {
       display: none;
     }
     &__nav {
       display: none;
     }
+    .logo {
+      flex-direction: column;
+    }
     // small screen menu
     &__info.sm-screen {
       display: block;
     }
-    .small-nav-btn {
-      display: block;
-      position: absolute;
-      right: 40px;
-      top: 30%;
-      .fas {
-        font-size: 25px;
-      }
-    }
-    .nav-small {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      ul {
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-    }
   }
+//small menu 
+.small-nav-btn {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 4px;
+  .fas {
+    font-size: 25px;
+  }
+}
   //reasons 
 .reasons {
   &__item {
@@ -208,13 +261,9 @@
     margin-bottom: 20px;
     width: 290px;
     max-width: 90%;
-
   }
 }
 
-.fixed-header {
-  display: none!important; //убрать
-}
 //more info
 .more-info {
   &__count-heading {
@@ -258,10 +307,4 @@
     left: 0;
   }
 }
-}
-
-
-
-@media only screen and (max-width: 450px){
-  
 }

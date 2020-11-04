@@ -10,7 +10,9 @@ body {
   font-family: $default-font;
   overflow-x: hidden;
   opacity: 1;
-
+}
+html {
+  scroll-behavior: smooth;
 }
 h1,h2,h3,h4,h5,h6 {
   margin: 0;
@@ -37,6 +39,10 @@ ul {
 .logo {
   display: flex;
   align-items: center;
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
 }
 .logo__descr {
   margin-left: 13px;
@@ -196,6 +202,92 @@ ul {
   padding: 15px 0;
   display: none;
 }
-.nav-small, .small-nav-btn {
+
+//small menu 
+
+.nav-small {
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+  background-color: #fff;
+  width: 100%;
+
+  ul {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+.small-nav-btn {
   display: none;
+}
+
+//modal 
+.callme-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 300;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0, .8);
+}
+
+.callme-inner {
+  padding: 89px 150px 70px;
+  border-radius: 4px;
+  background: #fff;
+  position: relative;
+}
+.close-modal {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  background: transparent;
+  border: none;
+  .fas {
+    font-size: 30px;
+    color: rgb(114, 114, 114);
+  }
+}
+.close-modal:focus {
+  outline: none;
+}
+.callme-form {
+  display: flex;
+  flex-direction: column;
+}
+.callme-text {
+  font: 700 18px/22px 'Montseratt-Bold',sans-serif;// extra bold
+  text-align: center;
+  margin-bottom: 30px;
+}
+.callme-form {
+  max-width: 230px;
+  margin: 0 auto;
+  width: 100%;
+  input {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 46px;
+    border: 2px solid #dddddd;
+    border-radius: 4px;
+    padding: 0 15px;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  button {
+    padding: 16px 60px 16px 24px;
+    font-size: 16px;
+    line-height: 16px;
+    background: linear-gradient(to right, rgba(248,105,0,1) 0%,rgba(255,156,0,1) 100%);
+  }
+  span {
+    text-align: center;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 33px 0 0;
+  }
 }
